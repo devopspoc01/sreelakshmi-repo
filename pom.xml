@@ -22,6 +22,7 @@
         	<sonar.host.url>http://43.205.107.65:9000/</sonar.host.url>
         	<sonar.login>admin</sonar.login>
         	<sonar.password>ram@3037</sonar.password>
+		<sonar.exclusions>src/test/java/**/*.java</sonar.exclusions>
         	<!--<sonar.projectBaseDir>/home/ubuntu/sonar</sonar.projectBaseDir>-->
 	</properties>
 	<dependencies>
@@ -50,11 +51,7 @@
         			<groupId>org.sonarsource.scanner.maven</groupId>
         			<artifactId>sonar-maven-plugin</artifactId>
         			<version>3.7.0.1746</version>
-				<configuration>
-                                   <sonar.sources>src/main/java</sonar.sources>
-                                   <sonar.exclusions>file:**/src/test/java/**/*.java</sonar.exclusions>
-                                </configuration>
-      			</plugin>
+		       </plugin>
 			<plugin>
                 		<groupId>org.apache.maven.plugins</groupId>
                 		<artifactId>maven-compiler-plugin</artifactId>
